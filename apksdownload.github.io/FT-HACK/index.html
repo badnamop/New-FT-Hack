@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from apksdownload.github.io/FT-HACK/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 29 Sep 2024 08:46:16 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APK Download</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }
+        .container {
+            text-align: center;
+            margin-top: 50px;
+            position: relative;
+            z-index: 1;
+        }
+        .apk-logo {
+            width: 150px;
+            animation: fadeIn 2s ease-in-out;
+            filter: drop-shadow(0 0 20px rgba(255, 0, 0, 0.8));
+            transition: transform 0.3s, filter 0.3s;
+        }
+        .apk-logo:hover {
+            transform: scale(1.1);
+            filter: drop-shadow(0 0 40px rgba(255, 0, 0, 1));
+        }
+        .apk-title {
+            font-size: 40px;
+            font-weight: bold;
+            margin: 20px 0;
+            animation: slideInDown 1.5s ease-out;
+        }
+        .button {
+            display: block;
+            width: 80%;
+            max-width: 300px;
+            padding: 15px;
+            margin: 20px auto;
+            background-color: #ff0000;
+            color: white;
+            font-size: 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            animation: glow 2s infinite alternate;
+            transition: transform 0.3s, background-color 0.3s;
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.8), 0 0 30px rgba(255, 0, 0, 0.4);
+        }
+        .button:hover {
+            background-color: #cc0000;
+            transform: scale(1.1);
+            box-shadow: 0 0 30px rgba(255, 0, 0, 1), 0 0 60px rgba(255, 0, 0, 0.6);
+        }
+        @keyframes glow {
+            0% {
+                box-shadow: 0 0 15px rgba(255, 0, 0, 0.8), 0 0 30px rgba(255, 0, 0, 0.4);
+            }
+            100% {
+                box-shadow: 0 0 30px rgba(255, 0, 0, 1), 0 0 60px rgba(255, 0, 0, 0.6);
+            }
+        }
+        @keyframes slideInDown {
+            0% {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        /* Matrix background */
+        .matrix-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 0;
+        }
+        canvas {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Matrix background -->
+    <div class="matrix-bg">
+        <canvas id="matrix"></canvas>
+    </div>
+
+    <div class="container">
+        <!-- APK Logo with glow -->
+        <img src="logo.png" alt="APK Logo" class="apk-logo">
+        
+        <!-- APK Title -->
+        <div class="apk-title">FW HACK</div>
+
+        <!-- Download Button -->
+        <a href="FT%20HACK.apk" class="button">Download APK</a>
+
+        <!-- Join WhatsApp and Telegram Buttons -->
+        <a href="https://t.me/+UwEwk7amxXsxMjA9" class="button">Join Telegram</a>
+        <a href="https://telegram.dog/BADNAM_BADSHAH_X" class="button">Message On Telegram</a>
+    </div>
+
+    <script>
+        // Matrix background effect
+        const canvas = document.getElementById("matrix");
+        const ctx = canvas.getContext("2d");
+
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const letters = Array(256).join(1).split('');
+
+        const drawMatrix = () => {
+            ctx.fillStyle = "rgba(0, 0, 0, 0.05)";
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+            ctx.fillStyle = "#ff0000"; // Red matrix effect
+            letters.map((y_pos, index) => {
+                const text = String.fromCharCode(3e4 + Math.random() * 33);
+                const x_pos = index * 10;
+                ctx.fillText(text, x_pos, y_pos);
+                letters[index] = (y_pos > 758 + Math.random() * 1e4) ? 0 : y_pos + 10;
+            });
+        };
+
+        setInterval(drawMatrix, 50);
+    </script>
+
+</body>
+
+<!-- Mirrored from apksdownload.github.io/FT-HACK/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 29 Sep 2024 08:46:16 GMT -->
+</html>
